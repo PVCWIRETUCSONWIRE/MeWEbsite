@@ -1,7 +1,24 @@
 body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; }
 #wire1{width: 300px;height: auto;border-radius: 15px;border: 5px }
-.img{
-  display:grid;
+.product-img1st {
+    /* Mobile aur Laptop dono ke liye fit karne ke liye */
+    max-width: 100%;  /* Image screen se bahar nahi jayegi */
+    height: auto;     /* Aspect ratio kharab nahi hoga */
+    
+    /* Laptop par image kitni badi dikhe (aap 500px ya 600px kar sakte hain) */
+    width: 600px; 
+    
+    display: block;
+    margin: 20px auto; /* Image ko centre mein rakhne ke liye */
+    border-radius: 10px; /* Thode curved corners ke liye */
+}
+
+/* Agar aap chahte hain ki mobile par image 100% width le le */
+@media (max-width: 768px) {
+    .responsive-img {
+        width: 100%;
+        padding: 10px; /* Kinaro se thodi jagah chhodne ke liye */
+    }
 }
 .product-container {
   display: grid;
@@ -56,6 +73,7 @@ ul li { margin-left: 20px; }
 header { padding: 100px 50px; text-align: center; background: #f4f7f6; }
 .grid { display: flex; justify-content: space-around; padding: 50px; }
 .card { padding: 30px; border: 1px solid #ddd; border-radius: 8px; width: 25%; text-align: center; transition: 0.3s; }
+
 
 
 
